@@ -4,6 +4,7 @@ import ScrollToTop from "./component/scrollToTop";
 
 import { Home } from "./views/home";;
 import injectContext from "./store/appContext";
+import { NewContact } from "./views/NewContact";
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
@@ -21,7 +22,9 @@ const Layout = () => {
 					<Navbar />
 					<Routes>
 						<Route path="/" element={<Home />} />
-/>
+						<Route path="/new-contact" element={<NewContact />} />
+						
+
 					</Routes>
 					<Footer />
 				</ScrollToTop>

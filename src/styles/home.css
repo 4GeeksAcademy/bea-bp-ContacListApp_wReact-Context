@@ -1,0 +1,14 @@
+.flex-container {
+    display: flex !important;
+    align-items: center !important;
+    flex-direction: row !important;
+}
+.flex-container p {
+    margin: 0 !important;
+}
+
+
+.flex-container span {
+    display: inline-block;
+}
+
