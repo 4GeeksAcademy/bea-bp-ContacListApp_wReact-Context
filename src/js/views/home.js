@@ -1,15 +1,18 @@
-import React, { useContext } from "react";
-import { useNavigate } from "react-router";
-
-
+import React, { useContext, useEffect } from "react";
+import { useNavigate, useLocation } from "react-router";
 import { Context } from "../store/appContext";
 
 export const Home = () => {
 	const { store, actions } = useContext(Context);
 	const navigate = useNavigate();
+	const location = useLocation();
 
 	const { contacts } = store;
 
+	useEffect(() => {
+		actions.fetchContacts(); 
+	}, [location.pathname]); 
+	
 	const editContact = (contact) => {
 		actions.setContactForUpdate(contact);
 		navigate("/new-contact");
