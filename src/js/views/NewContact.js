@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 
+
 import { Context } from "../store/appContext";
 
 export const NewContact = () => {
@@ -34,22 +35,22 @@ export const NewContact = () => {
             />
           );
         })}
-        <button type="submit" className="btn btn-primary">
+        <button type="submit" className="btn btn-primary mt-3">
           Submit
         </button>
       </form>
-      <Link to="/">Go back</Link>
+      <Link to="/" className="btn btn-primary mt-3">Go back</Link>
     </div>
   );
 };
 
 const ContactItem = ({ value, inputOptions, handleChange }) => {
   return (
-    <div className="form-group">
+    <div className="form-group text-center">
       <label htmlFor={inputOptions.name}>{inputOptions.label}</label>
       <input
         type={inputOptions.type}
-        className="form-control"
+        className="form-control centered-placeholder"
         onChange={handleChange}
         value={value}
         id={inputOptions.name}
